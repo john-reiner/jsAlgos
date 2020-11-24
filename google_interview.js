@@ -17,5 +17,22 @@ const findSums = (arr, target) => {
     return false
 }
 
+// loop over array and check to see if complement is stored in object 
+// if not, store it in the object 
+// if it is return true 
 
-console.log(findSums(arr2, target1))
+const findSums1 = (arr, target) => {
+    let map = {}
+    for (let i = 0; i < arr.length; i ++) {
+        let complement = target - arr[i]
+        if (map[arr[i]]) {
+            let pair = [complement, arr[i]]
+            return pair
+        }
+        map[complement] = true
+    }
+    return false
+}
+
+
+console.log(findSums1(arr2, target1))
