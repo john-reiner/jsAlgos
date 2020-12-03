@@ -1,12 +1,11 @@
 let array1 = [0,3,4,31]
 let array2 = [4,6,30]
 
-const mergeSourtedArrays(array1, array2) => {
-    let newArray = array1 + array2
-
-    console.log(newArray)
+const mergeSortedArrays = (array1, array2) => {
+    let newArray = array1.concat(array2)
+    return newArray.sort()
 }
 
-console.log(mergeSourtedArrays(array1, array2))
+console.log(mergeSortedArrays(array1, array2))
 
 
