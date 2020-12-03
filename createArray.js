@@ -16,10 +16,17 @@ class MyArray {
 
     pop() {
         const lastItem = this.data[this.length - 1]
+        delete this.data[this.length - 1]
+        this.length --
+        return lastItem
     }
 }
 
 const newArray = new MyArray()
 newArray.push('hi')
 newArray.push('john')
+newArray.push('!')
+
+console.log(newArray)
+newArray.pop()
 console.log(newArray)
