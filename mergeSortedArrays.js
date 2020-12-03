@@ -7,4 +7,6 @@ const mergeSourtedArrays(array1, array2) => {
     console.log(newArray)
 }
 
+console.log(mergeSourtedArrays(array1, array2))
+
 
