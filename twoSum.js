@@ -8,15 +8,15 @@ const array = [1,2,3,4,5,6,7,8,9]
 const target = 8
 
 const twoSum = (array, target) => {
-    returnedPair = []
+    var storage = []
     for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array.length; j++) {
-            if (i !== j && array[i] + array[j] === target) {
-                returnedPair = [i, j]
-            }
+        let targetComplement = target - array[i]
+        if (storage.includes(array[i])) {
+            return [i, storage.indexOf(array[i])]
         }
+        storage.push(targetComplement)
     }
-    return returnedPair
+    return false
 }
 
 console.log(twoSum(array, target))
